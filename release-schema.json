@@ -51,7 +51,7 @@
                         "margin": {
                             "title":"Margin",
                             "description":"The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
-                            "type":["float","null"],
+                            "type":["float","null"]
                         },
                         "fixed":{
                             "title":"Fixed rate",
