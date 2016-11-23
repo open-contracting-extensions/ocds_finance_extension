@@ -1,0 +1,6 @@
+{
+  "name": "Financing",
+  "description": "Capturing details of the finance arranged for a contract, including loans, grants and other finance sources.",
+  "compatibility": ">=1.0.0",
+  "dependencies": ["parties"]
+}
