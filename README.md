@@ -11,7 +11,7 @@ The finance building block includes:
 
 * **Financing Party** - an organization reference to the id and name of an organisation listed in the main parties array. 
 * **Finance Type** - an entry from a FinanceType codelist (to be defined)
-* **Finance Category** - an entry from a Finance Category codelist, covering senion, mezzanine and other
+* **Finance Category** - an entry from a Finance Category codelist, covering senior, mezzanine and other
 * **Period** - a start and end date for the finance
 * **interestRate** - an object consisting of:
   * **base** - a constant such as 0.1, or a known rate such as LIBOR
