@@ -1,87 +1,141 @@
-{ 
-    "definitions":{
-        "Contract": {
-            "properties":{
-                "finance": {
-                    "title":"Finance",
-                    "description":"An array of financing arranged for this contract",
-                    "type":"array",
-                    "items": {
-                        "$ref":"#/definitions/Finance"
-                    }
-                }
-            }
-        },
-        "Finance": {
-            "title":"Financing arrangements",
-            "description":"This block can be used to model details of each of the parties financing a contract.",
-            "type":"object",
-            "properties":{
-                "id":{
-                    "title":"ID",
-                    "description":"An identifier for this financing arrangement",
-                    "type":["string","null"]
-                },
-                "title":{
-                    "title":"Title",
-                    "description":"A short title for this financing arrangement",
-                    "type":["string","null"]
-                },
-                "description":{
-                    "title":"Description",
-                    "description":"A short description of this financing arrangement.",
-                    "type":["string","null"]
-                },
-                "financingParty": {
-                    "$ref":"#/definitions/OrganizationReference"
-                },
-                "financeType":{
-                    "title":"Finance Type",
-                    "description":"The type of finance arranged, from the finance type codelist.",
-                    "type":"string",
-                    "enum":["grant","loan","others-to-add"]
-                },
-                "financeCategory": {
-                    "title":"Finance category",
-                    "description":"For categorising the nature of any debt. Choose from Senior, mezzanine or other for debt. This field can be left blank for non-debt financing.",
-                    "type":["string","null"],
-                    "enum":["senior","mezzanine","other","null"]
-                },
-                "value":{
-                    "$ref":"#/definitions/Value"
-                },
-                "period":{
-                  "$ref":"#/definitions/Period"  
-                },
-                "interestRate": {
-                    "type":"object",
-                    "title":"Interest Rate",
-                    "description":"The interest rate associated with this finance.",
-                    "properties":{
-                        "base":{
-                            "title":"Base",
-                            "description":"The variable to which an additional margin amount is added to get the Interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR), or can be omitted if margin specifies the entire interest rate.",
-                            "type":["string","float","null"]
-                        },
-                        "margin": {
-                            "title":"Margin",
-                            "description":"The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
-                            "type":["float","null"]
-                        },
-                        "fixed":{
-                            "title":"Fixed rate",
-                            "description":"A boolean field. If this interest rate of fixed, set to true. Otherwise, set to false.",
-                            "type":["boolean","null"]
-                        },
-                        "notes": {
-                            "title":"Notes",
-                            "description":"Any explanatory notes concerning the interest rate",
-                            "type":["string","null"]
-                        }
-
-                    }
-                }
-            }
+{
+  "definitions": {
+    "Contract": {
+      "properties": {
+        "finance": {
+          "title": "Finance",
+          "description": "An array with details of each source of finance arranged for this contract.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
+          }
         }
+      }
+    },
+    "Finance": {
+      "title": "Financing arrangements",
+      "description": "This block can be used to model details of each of the parties financing a contract or project. Note: If the finance is syndicated, and all the parties to the syndication are known, this section may be further extended with an array of syndicate partners. No schema for this is currently provided.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "An identifier for this financing arrangement.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "description": "A short title for this financing arrangement.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of this financing arrangement. This may include details of lender rights, step in arrangements, exchange rate guarantees, and for syndicated loans, details of syndication and any banks who are known parties to the loan.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "financingParty": {
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "financeType": {
+          "title": "Finance Type",
+          "description": "The type of finance arranged, from the finance type codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "financeType.csv",
+          "openCodelist": false
+        },
+        "financeCategory": {
+          "title": "Finance category",
+          "description": "For categorising the nature of any financial investment. This field must be filled in for debt finance. This information can be used to identify the order of preference for investors to get their money back in cases of liquidation.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "financeCategory.csv",
+          "openCodelist": false
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
+        },
+        "period": {
+          "$ref": "#/definitions/Period"
+        },
+        "interestRate": {
+          "type": "object",
+          "title": "Interest Rate",
+          "description": "The interest rate associated with this finance.",
+          "properties": {
+            "base": {
+              "title": "Base",
+              "description": "The variable to which an additional margin amount is added to get the Interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR), or can be omitted if margin specifies the entire interest rate.",
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            },
+            "margin": {
+              "title": "Margin",
+              "description": "The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "fixed": {
+              "title": "Fixed rate",
+              "description": "A boolean field. If this interest rate of fixed, set to true. Otherwise, set to false.",
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "notes": {
+              "title": "Notes",
+              "description": "Any explanatory notes concerning the interest rate.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "repaymentFrequency": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Repayment Frequency (days)",
+          "description": "What is the average repayment frequency (in days) for this source of finance. For example, for yearly, use 365; for monthly repayment use 30.4; for daily use 1. User interfaces may wish to translate this into a more user-friendly presentation, such as 'daily','monthly' or 'yearly'.",
+          "minimum": 0
+        },
+        "stepInRights": {
+          "title": "Step in rights",
+          "description": "Does provision of this finance confer any step in rights on the financing party? Step in rights are the lender’s option to assume certain contractual responsibilities of a project party through managing their contract in cases when that party is not meeting its obligations under such a contract. This is a true/false field to indicate when step in rights exist. If there are step in rights, details should be provided in the description field, and in additional contract documents.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "exchangeRateGuarantee": {
+          "title": "Exchange rate guarantees",
+          "description": "Is there an associated exchange rate guarantee with this souce of finance. This is a true/false field to indicate when exchange rate guarantees exist. Details of any guarantees can be provided in the finance description, or in associated documents.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
     }
+  }
 }
