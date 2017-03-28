@@ -65,9 +65,13 @@
           "openCodelist": false
         },
         "value": {
+          "title":"Value",
+          "description":"The total value of this finance.",
           "$ref": "#/definitions/Value"
         },
         "period": {
+          "title":"Finance period",
+          "description":"What period is covered by this finance.",
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
