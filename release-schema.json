@@ -56,7 +56,7 @@
         },
         "financeCategory": {
           "title": "Finance category",
-          "description": "For categorising the nature of any financial investment. This field must be filled in for debt finance. This information can be used to identify the order of preference for investors to get their money back in cases of liquidation.",
+          "description": "For categorizing the nature of any financial investment. This field must be filled in for debt finance. This information can be used to identify the order of preference for investors to get their money back in cases of liquidation.",
           "type": [
             "string",
             "null"
@@ -133,7 +133,7 @@
         },
         "exchangeRateGuarantee": {
           "title": "Exchange rate guarantees",
-          "description": "Is there an associated exchange rate guarantee with this souce of finance. This is a true/false field to indicate when exchange rate guarantees exist. Details of any guarantees can be provided in the finance description, or in associated documents.",
+          "description": "Is there an associated exchange rate guarantee with this source of finance. This is a true/false field to indicate when exchange rate guarantees exist. Details of any guarantees can be provided in the finance description, or in associated documents.",
           "type": [
             "boolean",
             "null"
