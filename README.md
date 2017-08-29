@@ -30,3 +30,6 @@ The 'financeType' codelist is based on the list on [Page 57 of the World Bank PP
 
 The 'financeCategory' codelist is used to indicate (a) the rights attached to finance (in terms of equity, mezzanine and senior loans), and (b) to distinguish direct finance from guarantees. 
 
+## Issues
+
+Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
