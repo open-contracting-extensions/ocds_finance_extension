@@ -1,6 +1,18 @@
 {
-  "name": "Financing",
-  "description": "Capturing details of the finance arranged for a contract, including loans, grants and other finance sources.",
-  "compatibility": ">=1.0.0",
-  "dependencies": ["parties"]
+  "name": {
+    "en": "Financing"
+  },
+  "description": {
+    "en": "Capturing details of the finance arranged for a contract, including loans, grants and other finance sources."
+  },
+  "compatibility": [
+    "1.0",
+    "1.1"
+  ],
+  "dependencies": [
+    "parties"
+  ],
+  "documentationUrl": {
+    "en": "https://github.com/open-contracting/ocds_finance_extension"
+  }
 }
