@@ -14,6 +14,6 @@
   },
   "codelists": [
     "financeCategory.csv",
-    "financeTypes.csv"
+    "financeType.csv"
   ]
 }
