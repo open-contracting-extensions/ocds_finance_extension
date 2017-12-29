@@ -52,7 +52,17 @@
             "null"
           ],
           "codelist": "financeType.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "institutional",
+            "commercial",
+            "bilateral",
+            "multilateral",
+            "publicBondIssue",
+            "supplierCredit",
+            "other",
+            null
+          ]
         },
         "financeCategory": {
           "title": "Finance category",
@@ -62,16 +72,25 @@
             "null"
           ],
           "codelist": "financeCategory.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "equity",
+            "seniorDebt",
+            "mezzanineDebt",
+            "grant",
+            "guarantee",
+            "other",
+            null
+          ]
         },
         "value": {
-          "title":"Value",
-          "description":"The total value of this finance.",
+          "title": "Value",
+          "description": "The total value of this finance.",
           "$ref": "#/definitions/Value"
         },
         "period": {
-          "title":"Finance period",
-          "description":"What period is covered by this finance.",
+          "title": "Finance period",
+          "description": "What period is covered by this finance.",
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
