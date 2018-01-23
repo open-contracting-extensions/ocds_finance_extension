@@ -4,7 +4,7 @@ Sometimes, particularly in the case of Public Private Partnerships, contracts ar
 
 The financing extension provides a space to declare the finance arranged for a contract.
 
-This is declared within the ```contract``` section, based on an understanding that this information is generally only disclosed following the signature of a contract. This information can be updated over the lifetime of the contract.
+This is declared within the `contract` section, based on an understanding that this information is generally only disclosed following the signature of a contract. This information can be updated over the lifetime of the contract.
 
 The finance building block includes:
 
