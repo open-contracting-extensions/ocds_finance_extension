@@ -43,7 +43,7 @@
         },
         "financingParty": {
           "title": "Financing party",
-          "description": "The party providing this financing arrangement",
+          "description": "The party providing this financing arrangement.",
           "$ref": "#/definitions/OrganizationReference"
         },
         "financeType": {
