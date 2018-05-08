@@ -16,13 +16,15 @@
       "title": "Financing arrangements",
       "description": "This block can be used to model details of each of the parties financing a contract or project. Note: If the finance is syndicated, and all the parties to the syndication are known, this section may be further extended with an array of syndicate partners. No schema for this is currently provided.",
       "type": "object",
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "title": "ID",
           "description": "An identifier for this financing arrangement.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "title": {
