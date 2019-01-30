@@ -29,6 +29,62 @@ The 'financeType' codelist is based on the list on [Page 57 of the World Bank PP
 
 The 'financeCategory' codelist is used to indicate (a) the rights attached to finance (in terms of equity, mezzanine and senior loans), and (b) to distinguish direct finance from guarantees.
 
+## Example
+
+```json
+{
+  "contracts": [
+    {
+      "id": "1",
+      "awardID": "1",
+      "title": "Public Private Partnership Agreement",
+      "description": "Public-Private Partnership agreement entered into by and between telecoms promoter, together with national fibre infrastructure and the special purpose vehicle Mega Consortium Ltd",
+      "finance": [
+        {
+          "id": "1",
+          "title": "Primary senior debt financing agreement",
+          "description": "Big Bank Corp retains the right to step in should Mega Consortium fail to comply with the repayment schedule for a period of 3 consecutive months.",
+          "financingParty": {
+            "id": "XX-FI-22222222",
+            "name": "Big Bank Corp"
+          },
+          "financeCategory": "seniorDebt",
+          "value": {
+            "amount": 41000000,
+            "currency": "USD"
+          },
+          "period": {
+            "startDate": "2016-01-24T00:00:00Z",
+            "endDate": "2021-01-23T00:00:00Z"
+          },
+          "interestRate": {
+            "base": "LIBOR",
+            "margin": 0.03,
+            "fixed": false
+          },
+          "stepInRights": true,
+          "exchangeRateGuarantee": false,
+          "repaymentFrequency": 30.4
+        },
+        {
+          "id": "2",
+          "title": "Alpha Holdings equity investment",
+          "financingParty": {
+            "id": "XX-XXX-11111111",
+            "name": "Alpha Holdings Ltd"
+          },
+          "financeCategory": "equity",
+          "value": {
+            "amount": 6674000,
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
