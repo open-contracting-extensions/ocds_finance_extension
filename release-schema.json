@@ -23,9 +23,8 @@
         "id": {
           "title": "ID",
           "description": "An identifier for this financing arrangement.",
-          "type": [
-            "string"
-          ]
+          "type": "string",
+          "minLength": 1
         },
         "title": {
           "title": "Title",
