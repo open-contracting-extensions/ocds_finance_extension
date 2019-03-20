@@ -98,10 +98,7 @@
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
-          "type": [
-            "object",
-            "null"
-          ],
+          "type": "object",
           "title": "Interest rate",
           "description": "The interest rate associated with this finance.",
           "properties": {

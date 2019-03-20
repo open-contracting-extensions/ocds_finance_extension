@@ -91,6 +91,19 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2019-03-20
+
+* Set `"uniqueItems": true` on array fields, and add `"minLength": 1` on required string fields.
+* Make `interestRate` non-nullable (undo earlier change).
+
 ### 2018-05-08
 
-* Make `finance/id` required and non-nullable to support revision tracking and [list merging](http://standard.open-contracting.org/latest/en/schema/merging/#lists)
+* Make `Finance.id` required and non-nullable to support revision tracking and [list merging](http://standard.open-contracting.org/latest/en/schema/merging/#lists)
+
+### 2018-05-01
+
+* Add title and description to `Finance.financingParty`.
+
+### 2018-01-29
+
+* Make `interestRate` nullable.
