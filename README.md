@@ -21,13 +21,13 @@ The finance building block includes:
   * **fixed** - a boolean for whether the rate is fixed or variable
   * **notes** - space to provide more information on the rate
 
-This allows modelling of rates such as 'LIBOR+1%'.
+This allows modelling of rates such as "LIBOR+1%".
 
 ## Codelists
 
-The 'financeType' codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
+The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
 
-The 'financeCategory' codelist is used to indicate (a) the rights attached to finance (in terms of equity, mezzanine and senior loans), and (b) to distinguish direct finance from guarantees.
+The `financeCategory.csv` codelist is used to indicate (a) the rights attached to finance (in terms of equity, mezzanine and senior loans), and (b) to distinguish direct finance from guarantees.
 
 ## Example
 
