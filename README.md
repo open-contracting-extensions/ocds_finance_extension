@@ -2,9 +2,12 @@
 
 Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on.
 
-The financing extension provides a space to declare the finance arranged for a contract.
+The financing extension provides a space to declare:
 
-This is declared within the `contracts` section, based on an understanding that this information is generally only disclosed following the signature of a contract. This information can be updated over the lifetime of the contract.
+- the finance planned for the procedure
+- the finance arranged for a contract
+
+This is respectively declared within the `planning.budget` and `contracts` sections. This information can be updated over the lifetime of the contract.
 
 The finance building block includes:
 
@@ -22,6 +25,10 @@ The finance building block includes:
   * **notes** - space to provide more information on the rate
 
 This allows modelling of rates such as "LIBOR+1%".
+
+## Legal context
+
+In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://github.com/eForms/eForms). See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
 
 ## Codelists
 
@@ -90,6 +97,11 @@ The `financeCategory.csv` codelist is used to indicate (a) the rights attached t
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### 2020-04-17
+
+* Add the Finance array to `planning.budget`
+* Add the EU legal context
 
 ### 2019-03-20
 
