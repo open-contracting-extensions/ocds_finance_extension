@@ -77,6 +77,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### 2020-04-17
 
 * Add `planning.budget.finance` field.
+* Fix description of `financeCategory`.
 
 ### 2019-03-20
 
