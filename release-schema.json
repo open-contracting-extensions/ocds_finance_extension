@@ -13,20 +13,16 @@
         }
       }
     },
-    "Planning": {
+    "Budget": {
       "properties": {
-        "budget": {
-          "properties": {
-            "finance": {
-              "title": "Finance",
-              "description": "An array with details of each source of finance planned for this procedure.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Finance"
-              },
-              "uniqueItems": true
-            }
-          }
+        "finance": {
+          "title": "Finance",
+          "description": "An array with details of each source of finance planned for this procedure.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
+          },
+          "uniqueItems": true
         }
       }
     },
