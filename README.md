@@ -1,30 +1,8 @@
 # Financing extension
 
-Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on.
+Adds fields to disclose the financing of the whole process and its individual contracts.
 
-The financing extension provides a space to declare:
-
-- the finance planned for the procedure
-- the finance arranged for a contract
-
-This is respectively declared within the `planning.budget` and `contracts` sections. This information can be updated over the lifetime of the contract.
-
-The finance building block includes:
-
-* **Title** and **Description** - for providing summary information about the finance
-* **Financing Party** - an organization reference to the id and name of an organization listed in the main parties array.
-* **Finance Type** - an entry from a FinanceType codelist
-* **Finance Category** - an entry from a Finance Category codelist
-* **Step in arrangements** and **Exchange rate guarantee** flags, to indicate whether either apply to this finance
-* **Repayment Frequency** - to give an indication of likely repayments
-* **Period** - a start, end date and/or duration for the finance
-* **interestRate** - an object consisting of:
-  * **base** - a constant such as 0.1, or a known rate such as LIBOR
-  * **margin** - the component added to this base to give the rate
-  * **fixed** - a boolean for whether the rate is fixed or variable
-  * **notes** - space to provide more information on the rate
-
-This allows modelling of rates such as "LIBOR+1%".
+Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on. This information can be updated over the lifetime of the contract.
 
 ## Legal context
 
@@ -33,8 +11,6 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
 ## Codelists
 
 The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
-
-The `financeCategory.csv` codelist is used to indicate (a) the rights attached to finance (in terms of equity, mezzanine and senior loans), and (b) to distinguish direct finance from guarantees.
 
 ## Example
 
@@ -100,8 +76,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2020-04-17
 
-* Add the Finance array to `planning.budget`
-* Add the EU legal context
+* Add `planning.budget.finance` field.
 
 ### 2019-03-20
 
