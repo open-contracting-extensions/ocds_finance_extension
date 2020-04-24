@@ -74,6 +74,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2020-04-24
+
+* Add `minProperties`, `minItems` and/or `minLength` properties.
+
 ### 2020-04-17
 
 * Add `planning.budget.finance` field.
