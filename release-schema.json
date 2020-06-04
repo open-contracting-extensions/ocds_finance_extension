@@ -67,7 +67,7 @@
         },
         "financeType": {
           "title": "Finance type",
-          "description": "The type of finance arranged, from the finance type codelist.",
+          "description": "The type of finance arranged.",
           "type": [
             "string",
             "null"
