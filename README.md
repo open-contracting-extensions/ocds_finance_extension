@@ -1,4 +1,4 @@
-# Financing extension
+# Finance extension
 
 Adds fields to disclose the financing of the whole process and its individual contracts.
 
