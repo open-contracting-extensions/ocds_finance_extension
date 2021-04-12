@@ -12,7 +12,9 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
 
 The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
 
-## Example
+## Examples
+
+### Public Private Partnerships contracts
 
 ```json
 {
@@ -65,6 +67,38 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
       ]
     }
   ]
+}
+```
+
+### Procurement Process funding
+
+```json
+{
+  "planning": {
+    "budget": {
+      "description": "Adquisición de equipos odontológicos para las Unidades de Salud de la Familia",
+      "amount": {
+        "currency": "PYG",
+        "amount": 643702500
+      },
+      "finance": [
+        {
+          "id": "1",
+          "title": "Presupuesto de financiación de deuda primaria",
+          "financingParty": {
+            "id": "XX-FI-22222222",
+            "name": "Banco Interamericano de Desarrollo (BID)"
+          },
+          "financeCategory": "seniorDebt",
+          "financeType": "multilateral",
+          "value": {
+            "amount": 643702500,
+            "currency": "PYG"
+          }
+        }
+      ]
+    }
+  }
 }
 ```
 
