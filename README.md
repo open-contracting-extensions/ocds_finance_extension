@@ -14,7 +14,7 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 
 ## Examples
 
-### Public Private Partnerships contracts
+### Public-private partnership contract financing
 
 ```json
 {
@@ -70,7 +70,7 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 }
 ```
 
-### Procurement Process funding
+### Procurement process financing
 
 ```json
 {
