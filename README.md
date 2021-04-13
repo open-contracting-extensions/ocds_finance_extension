@@ -2,7 +2,7 @@
 
 Adds fields to disclose the financing of the whole process and its individual contracts.
 
-Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on. This information can be updated over the lifetime of the contract.
+Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on. This information can be updated over the lifetime of the contract. In other cases, the whole contracting process is financed by some of these instruments.
 
 ## Legal context
 
@@ -13,6 +13,38 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
 The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
 
 ## Examples
+
+### Procurement process financing
+
+```json
+{
+  "planning": {
+    "budget": {
+      "description": "Adquisición de equipos odontológicos para las Unidades de Salud de la Familia",
+      "amount": {
+        "currency": "PYG",
+        "amount": 643702500
+      },
+      "finance": [
+        {
+          "id": "1",
+          "title": "Presupuesto de financiación de deuda primaria",
+          "financingParty": {
+            "id": "XX-FI-22222222",
+            "name": "Banco Interamericano de Desarrollo (BID)"
+          },
+          "financeCategory": "seniorDebt",
+          "financeType": "multilateral",
+          "value": {
+            "amount": 643702500,
+            "currency": "PYG"
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
 ### Public-private partnership contract financing
 
@@ -67,38 +99,6 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
       ]
     }
   ]
-}
-```
-
-### Procurement process financing
-
-```json
-{
-  "planning": {
-    "budget": {
-      "description": "Adquisición de equipos odontológicos para las Unidades de Salud de la Familia",
-      "amount": {
-        "currency": "PYG",
-        "amount": 643702500
-      },
-      "finance": [
-        {
-          "id": "1",
-          "title": "Presupuesto de financiación de deuda primaria",
-          "financingParty": {
-            "id": "XX-FI-22222222",
-            "name": "Banco Interamericano de Desarrollo (BID)"
-          },
-          "financeCategory": "seniorDebt",
-          "financeType": "multilateral",
-          "value": {
-            "amount": 643702500,
-            "currency": "PYG"
-          }
-        }
-      ]
-    }
-  }
 }
 ```
 
