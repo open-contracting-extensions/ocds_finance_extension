@@ -2,7 +2,7 @@
 
 Adds fields to disclose the financing of the whole process and its individual contracts.
 
-Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on. This information can be updated over the lifetime of the contract. In other cases, the whole contracting process is financed by some of these instruments.
+Sometimes, particularly in the case of Public Private Partnerships, contracts are financed using a range of instruments, including loans, grants, share issues and so-on. This information can be updated over the lifetime of the contract.
 
 ## Legal context
 
