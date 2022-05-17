@@ -181,6 +181,19 @@
             "boolean",
             "null"
           ]
+        },
+        "relatedLots": {
+          "title": "Related lot(s)",
+          "description": "The identifiers of the lots to which this financing arrangement relates.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string"
+            ]
+          }
         }
       },
       "minProperties": 1

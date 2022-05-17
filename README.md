@@ -1,4 +1,4 @@
-# Finance extension
+# Finance
 
 Adds fields to disclose the financing of the whole process and its individual contracts.
 
@@ -107,6 +107,10 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### 2022-05-17
+
+* Move `Finance.relatedLots` from the Lots extension
 
 ### 2020-06-04
 
