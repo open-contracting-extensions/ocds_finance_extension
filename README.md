@@ -6,7 +6,7 @@ Sometimes, particularly in the case of Public Private Partnerships, contracts ar
 
 ## Legal context
 
-In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://github.com/eForms/eForms). See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
+In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/master/en/) for the correspondences to Tenders Electronic Daily (TED).
 
 ## Codelists
 
