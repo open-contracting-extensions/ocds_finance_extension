@@ -115,9 +115,9 @@
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
-          "type": "object",
           "title": "Interest rate",
           "description": "The interest rate associated with this finance.",
+          "type": "object",
           "properties": {
             "base": {
               "title": "Base",
@@ -158,12 +158,12 @@
           "minProperties": 1
         },
         "repaymentFrequency": {
+          "title": "Repayment frequency (days)",
+          "description": "What is the average repayment frequency (in days) for this source of finance. For example, for yearly, use 365; for monthly repayment use 30.4; for daily use 1. User interfaces may wish to translate this into a more user-friendly presentation, such as 'daily','monthly' or 'yearly'.",
           "type": [
             "number",
             "null"
           ],
-          "title": "Repayment frequency (days)",
-          "description": "What is the average repayment frequency (in days) for this source of finance. For example, for yearly, use 365; for monthly repayment use 30.4; for daily use 1. User interfaces may wish to translate this into a more user-friendly presentation, such as 'daily','monthly' or 'yearly'.",
           "minimum": 0
         },
         "stepInRights": {
