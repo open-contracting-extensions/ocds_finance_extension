@@ -6,11 +6,11 @@ Sometimes, particularly in the case of Public Private Partnerships, contracts ar
 
 ## Legal context
 
-In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to Tenders Electronic Daily (TED), see [OCDS for the European Union](http://standard.open-contracting.org/profiles/eu/latest/en/).
+In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to Tenders Electronic Daily (TED), see [OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/).
 
 ## Codelists
 
-The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](http://pubdocs.worldbank.org/en/143671469558797229/FrameworkPPPDisclosure-071416.pdf#page=57)
+The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](https://thedocs.worldbank.org/en/doc/143671469558797229-0100022016/original/FrameworkPPPDisclosure071416.pdf#page=57).
 
 ## Examples
 
@@ -132,7 +132,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2018-05-08
 
-* Make `Finance.id` required and non-nullable to support revision tracking and [list merging](http://standard.open-contracting.org/latest/en/schema/merging/#lists)
+* Make `Finance.id` required and non-nullable to support revision tracking and [list merging](https://standard.open-contracting.org/latest/en/schema/merging/#array-values)
 
 ### 2018-05-01
 
