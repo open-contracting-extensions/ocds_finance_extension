@@ -10,7 +10,7 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
 
 ## Codelists
 
-The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](https://thedocs.worldbank.org/en/doc/143671469558797229-0100022016/original/FrameworkPPPDisclosure071416.pdf#page=57).
+The `financingPartyType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](https://thedocs.worldbank.org/en/doc/143671469558797229-0100022016/original/FrameworkPPPDisclosure071416.pdf#page=57).
 
 ## Examples
 
@@ -20,25 +20,22 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 {
   "planning": {
     "budget": {
-      "description": "Adquisición de equipos odontológicos para las Unidades de Salud de la Familia",
-      "amount": {
-        "currency": "PYG",
-        "amount": 643702500
-      },
       "finance": [
         {
           "id": "1",
-          "title": "Presupuesto de financiación de deuda primaria",
           "financingParty": {
-            "id": "XX-FI-22222222",
-            "name": "Banco Interamericano de Desarrollo (BID)"
+            "id": "1",
+            "name": "Development Bank of South Africa"
           },
-          "financeCategory": "seniorDebt",
-          "financeType": "multilateral",
-          "value": {
-            "amount": 643702500,
-            "currency": "PYG"
-          }
+          "source": "Green Climate Fund",
+          "financingPartyType": "bilateral",
+          "assetClass": [
+            "debt"
+          ],
+          "type": "loan",
+          "repaymentPriority": "senior",
+          "concessional": false,
+          "resultsBased": false
         }
       ]
     }
@@ -65,7 +62,11 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
             "id": "XX-FI-22222222",
             "name": "Big Bank Corp"
           },
-          "financeCategory": "seniorDebt",
+          "assetClass": [
+            "debt"
+          ],
+          "type": "loan",
+          "repaymentPriority": "senior",
           "value": {
             "amount": 41000000,
             "currency": "USD"
@@ -90,7 +91,9 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
             "id": "XX-XXX-11111111",
             "name": "Alpha Holdings Ltd"
           },
-          "financeCategory": "equity",
+          "assetClass": [
+            "equity"
+          ],
           "value": {
             "amount": 6674000,
             "currency": "USD"
@@ -107,6 +110,23 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### 2023-11-13
+
+* Deprecate fields and codelists:
+  * `Finance.financeType` and `financeType.csv` in favour of `Finance.financingPartyType`, `financingPartyType.csv`, `Finance.type` and `financingArrangementType.csv`
+  * `Finance.financeCategory` and `financeCategory.csv` in favour of `Finance.assetClass`, `assetClass.csv`, `Finance.type`, `financingArrangementType.csv`, `Finance.repaymentPriority` and `debtRepaymentPriority.csv`.
+* Add fields:
+  * `Finance.resultsBased`
+  * `Finance.concessional`
+  * `Finance.source`
+  * `Finance.repaymentPeriod`
+* Update descriptions:
+  * `Contract.finance`
+  * `Budget.finance`
+  * `Finance`
+  * `Finance.description`
+  * `Finance.period`
 
 ### 2022-05-17
 

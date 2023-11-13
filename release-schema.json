@@ -4,7 +4,7 @@
       "properties": {
         "finance": {
           "title": "Finance",
-          "description": "An array with details of each source of finance arranged for this contract.",
+          "description": "Information about financing arrangements for this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Finance"
@@ -18,7 +18,7 @@
       "properties": {
         "finance": {
           "title": "Finance",
-          "description": "An array with details of each source of finance planned for this procedure.",
+          "description": "Information about financing arrangements for this contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Finance"
@@ -30,7 +30,7 @@
     },
     "Finance": {
       "title": "Financing arrangement",
-      "description": "Information about a financing arrangement.",
+      "description": "An arrangement between two parties related to raising money.",
       "type": "object",
       "required": [
         "id"
@@ -53,7 +53,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A short description of this financing arrangement. This may include details of lender rights, step in arrangements, exchange rate guarantees, and for syndicated loans, details of syndication and any members of the syndicate.",
+          "description": "A short description of this financing arrangement. This may include details of service fees, commitment fees, lender rights, step in arrangements, exchange rate guarantees, and for syndicated loans, details of syndication and any members of the syndicate.",
           "type": [
             "string",
             "null"
@@ -64,6 +64,15 @@
           "title": "Financing organization",
           "description": "The organization providing this financing arrangement.",
           "$ref": "#/definitions/OrganizationReference"
+        },
+        "source": {
+          "title": "Funding source",
+          "description": "The source of funds for this financing arrangement. For example, the Green Climate Fund.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
         },
         "financeType": {
           "title": "Finance type",
@@ -83,7 +92,11 @@
             "supplierCredit",
             "other",
             null
-          ]
+          ],
+          "deprecated": {
+            "deprecatedVersion": "",
+            "description": "Deprecated in favour of `Finance.financingPartyType` and `Finance.type`."
+          }
         },
         "financeCategory": {
           "title": "Finance category",
@@ -102,6 +115,92 @@
             "guarantee",
             "other",
             null
+          ],
+          "deprecated": {
+            "deprecatedVersion": "",
+            "description": "Deprecated in favour of `Finance.assetClass`, `Finance.type` and `Finance.repaymentPriority`."
+          }
+        },
+        "assetClass": {
+          "title": "Asset class",
+          "description": "The asset class to which this financing arrangement belongs, from the closed assetClass codelist.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "debt",
+              "equity"
+            ],
+            "minLength": 1
+          },
+          "codelist": "assetClass.csv",
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "type": {
+          "title": "Type",
+          "description": "The type of this financing arrangement, from the closed financingArrangementType codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "financingArrangementType.csv",
+          "openCodelist": false,
+          "enum": [
+            "bond",
+            "loan",
+            "hybrid",
+            "shares.listed",
+            "shares.unlisted",
+            "grant",
+            "guarantee",
+            null
+          ]
+        },
+        "repaymentPriority": {
+          "title": "Repayment priority",
+          "description": "The priority in which the debt element of this financing arrangement will be repaid in the event of bankruptcy, from the open debtRepaymentPriority codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "debtRepaymentPriority.csv",
+          "openCodelist": false,
+          "enum": [
+            "senior",
+            "subordinated",
+            null
+          ]
+        },
+        "financingPartyType": {
+          "title": "Financing organization type",
+          "description": "The type of the financing organization, from the closed financingPartyType codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "financingPartyType.csv",
+          "openCodelist": false,
+          "enum": [
+            "institutional",
+            "commercial",
+            "bilateral",
+            "multilateral",
+            "vendor",
+            "other",
+            null
+          ]
+        },
+        "resultsBased": {
+          "title": "Results based",
+          "description": "Whether payments under this financing arrangement are contingent on the achievement of pre-defined results.",
+          "type": [
+            "boolean",
+            "null"
           ]
         },
         "value": {
@@ -111,7 +210,12 @@
         },
         "period": {
           "title": "Finance period",
-          "description": "What period is covered by this finance.",
+          "description": "The period covered by this financing arrangement. Also called maturity.",
+          "$ref": "#/definitions/Period"
+        },
+        "repaymentPeriod": {
+          "title": "Repayment period",
+          "description": "The period over which the borrower or issuer for this financing arrangement is obliged to make repayments.",
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
@@ -156,6 +260,14 @@
             }
           },
           "minProperties": 1
+        },
+        "concessional": {
+          "title": "Concessional",
+          "description": "Whether this financing arrangement is provided below market rate in order to accelerate climate or development objectives. This is also called soft financing and subsidized funding.",
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "repaymentFrequency": {
           "title": "Repayment frequency (days)",

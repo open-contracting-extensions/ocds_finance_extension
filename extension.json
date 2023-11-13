@@ -13,7 +13,11 @@
   ],
   "codelists": [
     "financeCategory.csv",
-    "financeType.csv"
+    "financeType.csv",
+    "assetClass.csv",
+    "debtRepaymentPriority.csv",
+    "financingArrangementType.csv",
+    "financingPartyType.csv"
   ],
   "schemas": [
     "release-schema.json"
