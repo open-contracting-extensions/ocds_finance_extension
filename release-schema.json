@@ -74,53 +74,6 @@
           ],
           "minLength": 1
         },
-        "financeType": {
-          "title": "Finance type",
-          "description": "The type of finance arranged.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "financeType.csv",
-          "openCodelist": false,
-          "enum": [
-            "institutional",
-            "commercial",
-            "bilateral",
-            "multilateral",
-            "publicBondIssue",
-            "supplierCredit",
-            "other",
-            null
-          ],
-          "deprecated": {
-            "deprecatedVersion": "",
-            "description": "Deprecated in favour of `Finance.financingPartyType` and `Finance.type`."
-          }
-        },
-        "financeCategory": {
-          "title": "Finance category",
-          "description": "The nature of the finance, relevant to determining the order of preference for investors to get their money back in case of liquidation.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "financeCategory.csv",
-          "openCodelist": false,
-          "enum": [
-            "equity",
-            "seniorDebt",
-            "mezzanineDebt",
-            "grant",
-            "guarantee",
-            "other",
-            null
-          ],
-          "deprecated": {
-            "deprecatedVersion": "",
-            "description": "Deprecated in favour of `Finance.assetClass`, `Finance.type` and `Finance.repaymentPriority`."
-          }
-        },
         "assetClass": {
           "title": "Asset class",
           "description": "The asset class to which this financing arrangement belongs, from the closed assetClass codelist.",

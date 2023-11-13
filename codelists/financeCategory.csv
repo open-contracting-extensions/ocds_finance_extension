@@ -1,7 +1,0 @@
-Code,Title,Description,Deprecation note
-equity,Equity,Equity finance is given in exchange for a share of ownership in the project (usually via direct or indirect shareholding in a Special Purpose Vehicle (SPV) company created to run the project).,Deprecated in favour of 'equity' in the assetClass codelist.
-seniorDebt,Senior debt,Senior debt (sometimes called senior loans) take priority over other more junior debt.,Deprecated in favour of 'debt' in the assetClass codelist and 'senior' in the debtRepaymentPriority codelist.
-mezzanineDebt,Mezzanine debt,Mezzanine debt (sometimes called mezzanine loans) take priority over common shares.,Deprecated in favour of 'debt' and 'equity' in the assetClass codelist and 'subordinated' in the debtRepaymentPriority codelist.
-grant,Grant,A grant is finance provided without expectation of repayment.,Deprecated in favour of 'grant' in the financingArrangementType codelist.
-guarantee,Guarantee,A guarantee is a promise by one party to assume the debt of another if the other defaults. Guarantees are not to be counted in totals of the overall financing of a project.,Deprecated in favour of 'guarantee' in the financingArrangementType codelist.
-other,Other debts or investments,Any details of the conditions attached to this finance can be provided in the notes field.,"Deprecated in favour of the assetClass, financingArrangementType and debtRepaymentPriority codelists."
