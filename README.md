@@ -78,7 +78,7 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
           },
           "stepInRights": true,
           "exchangeRateGuarantee": false,
-          "repaymentFrequency": 30.4
+          "paymentFrequency": 30.4
         },
         {
           "id": "2",
@@ -119,6 +119,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
     * 'mezzanineDebt' is replaced by 'debt' and 'equity' in `assetClass.csv` and 'subordinated' in `debtRepaymentPriority.csv`
     * 'grant' is replaced by 'grant' in `financingArrangementType.csv`
     * 'guarantee' is replaced by 'guarantee' in `financingArrangementType.csv`
+  * Replace `Finance.repaymentFrequency` with `Finance.paymentFrequency`.
 * Add fields:
   * `Finance.concessional`
   * `Finance.paymentPeriod`
