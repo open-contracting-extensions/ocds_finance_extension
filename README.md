@@ -8,10 +8,6 @@ Sometimes, particularly in the case of Public Private Partnerships, contracts ar
 
 In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to Tenders Electronic Daily (TED), see [OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/).
 
-## Codelists
-
-The `financingPartyType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](https://thedocs.worldbank.org/en/doc/143671469558797229-0100022016/original/FrameworkPPPDisclosure071416.pdf#page=57).
-
 ## Examples
 
 ### Procurement process financing
@@ -124,13 +120,13 @@ Report issues for this extension in the [ocds-extensions repository](https://git
     * 'grant' is replaced by 'grant' in `financingArrangementType.csv`
     * 'guarantee' is replaced by 'guarantee' in `financingArrangementType.csv`
 * Add fields:
-  * `Finance.resultsBased`
   * `Finance.concessional`
-  * `Finance.source`
   * `Finance.repaymentPeriod`
+  * `Finance.resultsBased`
+  * `Finance.source`
 * Update descriptions, for clarity:
-  * `Contract.finance`
   * `Budget.finance`
+  * `Contract.finance`
   * `Finance`
   * `Finance.description`
   * `Finance.period`
