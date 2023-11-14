@@ -23,8 +23,8 @@ In the European Union, this extension's fields correspond to [eForms BG-611 (Con
             "id": "1",
             "name": "Development Bank of South Africa"
           },
-          "source": "Green Climate Fund",
           "financingPartyType": "bilateral",
+          "source": "Green Climate Fund",
           "assetClass": [
             "debt"
           ],
