@@ -1,6 +1,6 @@
 Code,Title,Description
-bond,Bond,"A debt-based financial instrument issued by a national government, sub-national government, project company or corporate entity. A bond typically obliges the issuer to make interest payments (coupons) over a specified period and to repay the principle (amount borrowed) at the maturity date."
-loan,Loan,"A debt-based financial instrument provided by a lender such as a commercial bank, a multi-lateral financial institution, or development agency. A loan typically obliges the borrower to make principle and interest payments over a specified period."
+bond,Bond,"A debt-based financial instrument issued by a national government, subnational government, project company or corporate entity. A bond typically obliges the issuer to make interest payments (coupons) over a specified period and to repay the principle (amount borrowed) at the maturity date."
+loan,Loan,"A debt-based financial instrument provided by a lender such as a commercial bank, multi-lateral financial institution, or development agency. A loan typically obliges the borrower to make principal and interest payments over a specified period."
 hybrid,Hybrid,A debt-based instrument with equity-like participation. Also called mezzanine finance.
 shares.listed,Listed shares,An equity instrument representing ownership rights in a publicly traded company. Also called stocks.
 shares.unlisted,Unlisted shares,An equity instrument representing ownership rights in a private company.

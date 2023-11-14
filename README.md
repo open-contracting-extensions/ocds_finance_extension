@@ -113,22 +113,22 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### 2023-11-13
 
-* Clarify semantics:
-  * Replace Finance.financeType (financeType.csv) with `Finance.financingPartyType` (`financingPartyType.csv`) and `Finance.type` (`financingArrangementType.csv`). Notably:
-    * "publicBondIssue" is replaced by 'debt' in `financingArrangementType.csv` and 'bond' `assetClass.csv`
-    * "supplierCredit" is replaced by 'vendor' in the `financingPartyType.csv` codelist
-  * Replace Finance.financeCategory (financeCategory.csv) with `Finance.assetClass` (`assetClass.csv`), `Finance.type` (`financingArrangementType.csv`) and `Finance.repaymentPriority` (`debtRepaymentPriority.csv`). Notably:
-    * "equity" is replaced by 'equity' in `assetClass`
-    * "seniorDebt" is replaced by 'debt' in `assetClass.csv` and 'senior' in `debtRepaymentPriority.csv`
-    * "mezzanineDebt" is replaced by 'debt' and 'equity' in `assetClass.csv` and 'subordinated' in `debtRepaymentPriority.csv`
-    * "grant" is replaced by 'grant' in `financingArrangementType.csv`
-    * "guarantee" is replaced by 'guarantee' in `financingArrangementType.csv`
+* Replace fields, to clarify semantics:
+  * Replace `Finance.financeType` (`financeType.csv`) with `Finance.financingPartyType` (`financingPartyType.csv`) and `Finance.type` (`financingArrangementType.csv`). Notably:
+    * 'publicBondIssue' is replaced by 'debt' in `assetClass.csv` and 'bond' in `financingArrangementType.csv`
+    * 'supplierCredit' is replaced by 'vendor' in `financingPartyType.csv`
+  * Replace `Finance.financeCategory` (`financeCategory.csv`) with `Finance.assetClass` (`assetClass.csv`), `Finance.type` (`financingArrangementType.csv`) and `Finance.repaymentPriority` (`debtRepaymentPriority.csv`). Notably:
+    * 'equity' is replaced by 'equity' in `assetClass.csv`
+    * 'seniorDebt' is replaced by 'debt' in `assetClass.csv` and 'senior' in `debtRepaymentPriority.csv`
+    * 'mezzanineDebt' is replaced by 'debt' and 'equity' in `assetClass.csv` and 'subordinated' in `debtRepaymentPriority.csv`
+    * 'grant' is replaced by 'grant' in `financingArrangementType.csv`
+    * 'guarantee' is replaced by 'guarantee' in `financingArrangementType.csv`
 * Add fields:
   * `Finance.resultsBased`
   * `Finance.concessional`
   * `Finance.source`
   * `Finance.repaymentPeriod`
-* Update descriptions:
+* Update descriptions, for clarity:
   * `Contract.finance`
   * `Budget.finance`
   * `Finance`
@@ -150,7 +150,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### 2020-04-17
 
 * Add `planning.budget.finance` field.
-* Fix description of financeCategory.
+* Fix description of `Finance.financeCategory`.
 
 ### 2019-03-20
 

@@ -116,7 +116,7 @@
         },
         "repaymentPriority": {
           "title": "Repayment priority",
-          "description": "The priority in which the debt element of this financing arrangement will be repaid in the event of bankruptcy, from the open debtRepaymentPriority codelist.",
+          "description": "The priority in which the debt in this financing arrangement will be repaid in the event of bankruptcy, from the closed debtRepaymentPriority codelist.",
           "type": [
             "string",
             "null"
