@@ -121,7 +121,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
     * 'guarantee' is replaced by 'guarantee' in `financingArrangementType.csv`
 * Add fields:
   * `Finance.concessional`
-  * `Finance.repaymentPeriod`
+  * `Finance.paymentPeriod`
   * `Finance.resultsBased`
   * `Finance.source`
 * Update descriptions, for clarity:

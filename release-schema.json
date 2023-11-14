@@ -166,9 +166,9 @@
           "description": "The period covered by this financing arrangement. Also called maturity.",
           "$ref": "#/definitions/Period"
         },
-        "repaymentPeriod": {
-          "title": "Repayment period",
-          "description": "The period over which the borrower or issuer for this financing arrangement is obliged to make repayments.",
+        "paymentPeriod": {
+          "title": "Payment period",
+          "description": "The period over which the borrower for this financing arrangement is obliged to make payments.",
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
