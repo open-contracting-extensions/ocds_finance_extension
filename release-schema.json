@@ -30,7 +30,7 @@
     },
     "Finance": {
       "title": "Financing arrangement",
-      "description": "An arrangement between two parties related to raising money.",
+      "description": "An arrangement between two parties for raising money.",
       "type": "object",
       "required": [
         "id"
@@ -76,7 +76,7 @@
         },
         "assetClass": {
           "title": "Asset class",
-          "description": "The asset class to which this financing arrangement belongs, from the closed assetClass codelist.",
+          "description": "The asset classes used in this financing arrangement, from the closed assetClass codelist.",
           "type": [
             "array",
             "null"
@@ -116,7 +116,7 @@
         },
         "repaymentPriority": {
           "title": "Repayment priority",
-          "description": "The priority in which the debt in this financing arrangement will be repaid in the event of bankruptcy, from the closed debtRepaymentPriority codelist.",
+          "description": "The order in which the debt in this financing arrangement will be repaid in case of default, from the closed debtRepaymentPriority codelist.",
           "type": [
             "string",
             "null"
@@ -168,7 +168,7 @@
         },
         "paymentPeriod": {
           "title": "Payment period",
-          "description": "The period over which the borrower for this financing arrangement is obliged to make payments.",
+          "description": "The period over which the borrower in this financing arrangement is obliged to make payments.",
           "$ref": "#/definitions/Period"
         },
         "interestRate": {
@@ -216,7 +216,7 @@
         },
         "concessional": {
           "title": "Concessional",
-          "description": "Whether this financing arrangement is provided below market rate in order to accelerate climate or development objectives. This is also called soft financing and subsidized funding.",
+          "description": "Whether this financing arrangement is provided below market rate in order to accelerate climate or development objectives. Also called soft financing and subsidized funding.",
           "type": [
             "boolean",
             "null"
@@ -224,7 +224,7 @@
         },
         "paymentFrequency": {
           "title": "Payment frequency (days)",
-          "description": "What is the average payment frequency (in days) for this source of finance. For example, for yearly, use 365; for monthly payment use 30.4; for daily use 1. User interfaces may wish to translate this into a more user-friendly presentation, such as 'daily','monthly' or 'yearly'.",
+          "description": "The average payment frequency (in days) of this financing arrangement. For example, 365 for yearly, 30.4 for monthly, or 1 for daily.",
           "type": [
             "number",
             "null"
