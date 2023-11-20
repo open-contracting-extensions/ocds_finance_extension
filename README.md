@@ -8,10 +8,6 @@ Sometimes, particularly in the case of Public Private Partnerships, contracts ar
 
 In the European Union, this extension's fields correspond to [eForms BG-611 (Contract EU funds) and BG-61 (EU funds)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). For correspondences to Tenders Electronic Daily (TED), see [OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/).
 
-## Codelists
-
-The `financeType.csv` codelist is based on the list on [Page 57 of the World Bank PPP Disclosure Framework](https://thedocs.worldbank.org/en/doc/143671469558797229-0100022016/original/FrameworkPPPDisclosure071416.pdf#page=57).
-
 ## Examples
 
 ### Procurement process financing
@@ -20,25 +16,22 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
 {
   "planning": {
     "budget": {
-      "description": "Adquisición de equipos odontológicos para las Unidades de Salud de la Familia",
-      "amount": {
-        "currency": "PYG",
-        "amount": 643702500
-      },
       "finance": [
         {
           "id": "1",
-          "title": "Presupuesto de financiación de deuda primaria",
           "financingParty": {
-            "id": "XX-FI-22222222",
-            "name": "Banco Interamericano de Desarrollo (BID)"
+            "id": "1",
+            "name": "Development Bank of South Africa"
           },
-          "financeCategory": "seniorDebt",
-          "financeType": "multilateral",
-          "value": {
-            "amount": 643702500,
-            "currency": "PYG"
-          }
+          "financingPartyType": "bilateral",
+          "source": "Green Climate Fund",
+          "assetClass": [
+            "debt"
+          ],
+          "type": "loan",
+          "repaymentPriority": "senior",
+          "concessional": false,
+          "resultsBased": false
         }
       ]
     }
@@ -65,7 +58,11 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
             "id": "XX-FI-22222222",
             "name": "Big Bank Corp"
           },
-          "financeCategory": "seniorDebt",
+          "assetClass": [
+            "debt"
+          ],
+          "type": "loan",
+          "repaymentPriority": "senior",
           "value": {
             "amount": 41000000,
             "currency": "USD"
@@ -81,7 +78,7 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
           },
           "stepInRights": true,
           "exchangeRateGuarantee": false,
-          "repaymentFrequency": 30.4
+          "paymentFrequency": 30.4
         },
         {
           "id": "2",
@@ -90,7 +87,9 @@ The `financeType.csv` codelist is based on the list on [Page 57 of the World Ban
             "id": "XX-XXX-11111111",
             "name": "Alpha Holdings Ltd"
           },
-          "financeCategory": "equity",
+          "assetClass": [
+            "equity"
+          ],
           "value": {
             "amount": 6674000,
             "currency": "USD"
@@ -108,6 +107,31 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2023-11-13
+
+* Replace fields, to clarify semantics:
+  * Replace `Finance.financeType` (`financeType.csv`) with `Finance.financingPartyType` (`financingPartyType.csv`) and `Finance.type` (`financingArrangementType.csv`). Notably:
+    * 'publicBondIssue' is replaced by 'debt' in `assetClass.csv` and 'bond' in `financingArrangementType.csv`
+    * 'supplierCredit' is replaced by 'vendor' in `financingPartyType.csv`
+  * Replace `Finance.financeCategory` (`financeCategory.csv`) with `Finance.assetClass` (`assetClass.csv`), `Finance.type` (`financingArrangementType.csv`) and `Finance.repaymentPriority` (`debtRepaymentPriority.csv`). Notably:
+    * 'equity' is replaced by 'equity' in `assetClass.csv`
+    * 'seniorDebt' is replaced by 'debt' in `assetClass.csv` and 'senior' in `debtRepaymentPriority.csv`
+    * 'mezzanineDebt' is replaced by 'debt' and 'equity' in `assetClass.csv` and 'subordinated' in `debtRepaymentPriority.csv`
+    * 'grant' is replaced by 'grant' in `financingArrangementType.csv`
+    * 'guarantee' is replaced by 'guarantee' in `financingArrangementType.csv`
+  * Replace `Finance.repaymentFrequency` with `Finance.paymentFrequency`.
+* Add fields:
+  * `Finance.concessional`
+  * `Finance.paymentPeriod`
+  * `Finance.resultsBased`
+  * `Finance.source`
+* Update descriptions, for clarity:
+  * `Budget.finance`
+  * `Contract.finance`
+  * `Finance`
+  * `Finance.description`
+  * `Finance.period`
+
 ### 2022-05-17
 
 * Move `Finance.relatedLots` from the Lots extension
@@ -123,7 +147,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### 2020-04-17
 
 * Add `planning.budget.finance` field.
-* Fix description of `financeCategory`.
+* Fix description of `Finance.financeCategory`.
 
 ### 2019-03-20
 
