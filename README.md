@@ -107,6 +107,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### 2023-11-22
+
+* Reorder fields in logical order.
+
 ### 2023-11-13
 
 * Replace fields, to clarify semantics:
