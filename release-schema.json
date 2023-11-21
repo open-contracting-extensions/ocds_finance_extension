@@ -60,10 +60,34 @@
           ],
           "minLength": 1
         },
+        "value": {
+          "title": "Value",
+          "description": "The total value of this finance.",
+          "$ref": "#/definitions/Value"
+        },
         "financingParty": {
           "title": "Financing organization",
           "description": "The organization providing this financing arrangement.",
           "$ref": "#/definitions/OrganizationReference"
+        },
+        "financingPartyType": {
+          "title": "Financing organization type",
+          "description": "The type of the financing organization, from the closed financingPartyType codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "financingPartyType.csv",
+          "openCodelist": false,
+          "enum": [
+            "institutional",
+            "commercial",
+            "bilateral",
+            "multilateral",
+            "vendor",
+            "other",
+            null
+          ]
         },
         "source": {
           "title": "Funding source",
@@ -129,23 +153,12 @@
             null
           ]
         },
-        "financingPartyType": {
-          "title": "Financing organization type",
-          "description": "The type of the financing organization, from the closed financingPartyType codelist.",
+        "concessional": {
+          "title": "Concessional",
+          "description": "Whether this financing arrangement is provided below market rate in order to accelerate climate or development objectives. Also called soft financing and subsidized funding.",
           "type": [
-            "string",
+            "boolean",
             "null"
-          ],
-          "codelist": "financingPartyType.csv",
-          "openCodelist": false,
-          "enum": [
-            "institutional",
-            "commercial",
-            "bilateral",
-            "multilateral",
-            "vendor",
-            "other",
-            null
           ]
         },
         "resultsBased": {
@@ -156,11 +169,6 @@
             "null"
           ]
         },
-        "value": {
-          "title": "Value",
-          "description": "The total value of this finance.",
-          "$ref": "#/definitions/Value"
-        },
         "period": {
           "title": "Finance period",
           "description": "The period covered by this financing arrangement. Also called maturity.",
@@ -170,6 +178,15 @@
           "title": "Payment period",
           "description": "The period over which the borrower in this financing arrangement is obliged to make payments.",
           "$ref": "#/definitions/Period"
+        },
+        "paymentFrequency": {
+          "title": "Payment frequency (days)",
+          "description": "The average payment frequency (in days) of this financing arrangement. For example, 365 for yearly, 30.4 for monthly, or 1 for daily.",
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
         },
         "interestRate": {
           "title": "Interest rate",
@@ -214,34 +231,17 @@
           },
           "minProperties": 1
         },
-        "concessional": {
-          "title": "Concessional",
-          "description": "Whether this financing arrangement is provided below market rate in order to accelerate climate or development objectives. Also called soft financing and subsidized funding.",
+        "exchangeRateGuarantee": {
+          "title": "Exchange rate guarantees",
+          "description": "Whether there is an associated exchange rate guarantee with this source of finance.",
           "type": [
             "boolean",
             "null"
           ]
-        },
-        "paymentFrequency": {
-          "title": "Payment frequency (days)",
-          "description": "The average payment frequency (in days) of this financing arrangement. For example, 365 for yearly, 30.4 for monthly, or 1 for daily.",
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0
         },
         "stepInRights": {
           "title": "Step in rights",
           "description": "Whether provision of this finance confers any step in rights to the financing organization.",
-          "type": [
-            "boolean",
-            "null"
-          ]
-        },
-        "exchangeRateGuarantee": {
-          "title": "Exchange rate guarantees",
-          "description": "Whether there is an associated exchange rate guarantee with this source of finance.",
           "type": [
             "boolean",
             "null"
