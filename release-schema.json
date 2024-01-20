@@ -195,7 +195,7 @@
           "properties": {
             "base": {
               "title": "Base",
-              "description": "The variable to which an additional margin amount is added to get the Interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR or LIBOR+1%), or can be omitted if margin specifies the entire interest rate.",
+              "description": "The variable to which an additional margin amount is added to get the interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR or LIBOR+1%), or can be omitted if margin specifies the entire interest rate.",
               "type": [
                 "string",
                 "number",
@@ -205,7 +205,7 @@
             },
             "margin": {
               "title": "Margin",
-              "description": "The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
+              "description": "The variable added to the base to give the interest amount, expressed as a decimal (for example, 0.1) and not as a percentage (for example, 10).",
               "type": [
                 "number",
                 "null"
