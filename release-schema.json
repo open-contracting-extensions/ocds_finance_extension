@@ -18,7 +18,7 @@
       "properties": {
         "finance": {
           "title": "Finance",
-          "description": "Information about financing arrangements for this contracting process.",
+          "description": "Information about financing arrangements for a future contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Finance"
